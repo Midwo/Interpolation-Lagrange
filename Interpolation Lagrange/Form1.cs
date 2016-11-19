@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Interpolation_Lagrange
 {
@@ -15,16 +16,18 @@ namespace Interpolation_Lagrange
         public Form1()
         {
             InitializeComponent();
+          
         }
-
-        private void button1_Click(object sender, EventArgs e)
+    public float x1, x2, x3;
+    public float y1, y2, y3;
+    private void button1_Click(object sender, EventArgs e)
         {
-            float x1 = float.Parse(tx1.Text);
-            float x2 = float.Parse(tx2.Text);
-            float x3 = float.Parse(tx3.Text);
-            float y1 = float.Parse(ty1.Text);
-            float y2 = float.Parse(ty2.Text);
-            float y3 = float.Parse(ty3.Text);
+            x1 = float.Parse(tx1.Text);
+             x2 = float.Parse(tx2.Text);
+             x3 = float.Parse(tx3.Text);
+             y1 = float.Parse(ty1.Text);
+             y2 = float.Parse(ty2.Text);
+             y3 = float.Parse(ty3.Text);
 
            float wyza = ((y1 / ((x1-x2)*(x1-x3))) + 
                 (y2 / ((x2 - x1) * (x2 - x3))) 
@@ -54,12 +57,21 @@ namespace Interpolation_Lagrange
             fx1.Text = licz1.ToString();
             fx2.Text = licz2.ToString();
             fx3.Text = licz3.ToString();
+          
 
         }
 
         private void label13_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            chart1.Series["Funkcja"].Points.AddXY(x1, y1);
+            chart1.Series["Funkcja"].Points.AddXY(x2, y2);
+            chart1.Series["Funkcja"].Points.AddXY(x3, y3);
+            chart1.Series["Funkcja"].ChartType = SeriesChartType.Spline;
         }
     }
 }
