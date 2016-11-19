@@ -50,6 +50,7 @@
             this.la = new System.Windows.Forms.Label();
             this.lb = new System.Windows.Forms.Label();
             this.lc = new System.Windows.Forms.Label();
+            this.labelwzor = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -171,6 +172,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.labelwzor);
             this.groupBox1.Controls.Add(this.lc);
             this.groupBox1.Controls.Add(this.lb);
             this.groupBox1.Controls.Add(this.la);
@@ -248,6 +250,15 @@
             this.lc.TabIndex = 6;
             this.lc.Text = "??";
             // 
+            // labelwzor
+            // 
+            this.labelwzor.AutoSize = true;
+            this.labelwzor.Location = new System.Drawing.Point(7, 114);
+            this.labelwzor.Name = "labelwzor";
+            this.labelwzor.Size = new System.Drawing.Size(19, 13);
+            this.labelwzor.TabIndex = 7;
+            this.labelwzor.Text = "??";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -301,6 +312,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label labelwzor;
     }
 }
 

@@ -25,8 +25,28 @@ namespace Interpolation_Lagrange
             float y1 = float.Parse(ty1.Text);
             float y2 = float.Parse(ty2.Text);
             float y3 = float.Parse(ty3.Text);
-            la.Text = ((y1 / ((x1-x2)*(x1-x3))) + (y2 / ((x2 - x1) * (x2 - x3))) 
-                + (y3 / ((x3 - x1) * (x3 - x2)))).ToString();
+
+           float wyza = ((y1 / ((x1-x2)*(x1-x3))) + 
+                (y2 / ((x2 - x1) * (x2 - x3))) 
+                + (y3 / ((x3 - x1) * (x3 - x2))));
+
+            float wyzb = (
+                ((y1 * (x2 + x3)) / ((x1 - x2) * (x1 - x3))) -
+                ((y2 * (x1 + x3)) / ((x2 - x1) * (x2 - x3))) +
+                 ((y3 * (x1 + x2)) / ((x3 - x1) * (x3 - x2))));
+
+            float wyzc = (
+                ((y1 * x2 * x3) / ((x1 - x2) * (x1 - x3))) +
+                ((y2 * x1 * x3) / ((x2 - x1) * (x2 - x3))) +
+               ((y3 * x1 * x2) / ((x3 - x1) * (x3 - x2)))
+                );
+            la.Text = wyza.ToString();
+            lb.Text = wyzb.ToString();
+            lc.Text = wyzc.ToString();
+            labelwzor.Text = "f(x) = "+la.Text+"(x * x) + ("+lb.Text+")x + "+lc.Text+"";
+
+            float licz1 = 
+            float licz2 =
         }
     }
 }
