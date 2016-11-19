@@ -31,6 +31,9 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tx1 = new System.Windows.Forms.TextBox();
             this.tx3 = new System.Windows.Forms.TextBox();
             this.tx2 = new System.Windows.Forms.TextBox();
@@ -70,10 +73,15 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
             // 
             // tx1
@@ -82,6 +90,7 @@
             this.tx1.Name = "tx1";
             this.tx1.Size = new System.Drawing.Size(42, 20);
             this.tx1.TabIndex = 0;
+            this.tx1.Text = "-2";
             // 
             // tx3
             // 
@@ -89,6 +98,7 @@
             this.tx3.Name = "tx3";
             this.tx3.Size = new System.Drawing.Size(42, 20);
             this.tx3.TabIndex = 1;
+            this.tx3.Text = "2";
             // 
             // tx2
             // 
@@ -96,6 +106,7 @@
             this.tx2.Name = "tx2";
             this.tx2.Size = new System.Drawing.Size(42, 20);
             this.tx2.TabIndex = 2;
+            this.tx2.Text = "0";
             // 
             // ty1
             // 
@@ -103,6 +114,7 @@
             this.ty1.Name = "ty1";
             this.ty1.Size = new System.Drawing.Size(42, 20);
             this.ty1.TabIndex = 3;
+            this.ty1.Text = "4";
             // 
             // ty2
             // 
@@ -110,6 +122,7 @@
             this.ty2.Name = "ty2";
             this.ty2.Size = new System.Drawing.Size(42, 20);
             this.ty2.TabIndex = 4;
+            this.ty2.Text = "0";
             // 
             // ty3
             // 
@@ -117,6 +130,7 @@
             this.ty3.Name = "ty3";
             this.ty3.Size = new System.Drawing.Size(42, 20);
             this.ty3.TabIndex = 5;
+            this.ty3.Text = "4";
             // 
             // label1
             // 
@@ -417,14 +431,14 @@
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Location = new System.Drawing.Point(377, 9);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(474, 495);
+            this.groupBox3.Size = new System.Drawing.Size(474, 433);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tworzenie funkcji wykresu";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(198, 446);
+            this.button2.Location = new System.Drawing.Point(192, 404);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -434,25 +448,79 @@
             // 
             // chart1
             // 
+            chartArea1.BackColor = System.Drawing.Color.Khaki;
+            chartArea1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            chartArea1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            chartArea1.BorderWidth = 4;
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
+            legend1.BorderWidth = 3;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(6, 19);
             this.chart1.Name = "chart1";
+            series1.BorderWidth = 2;
             series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series1.Legend = "Legend1";
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
             series1.Name = "Funkcja";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(462, 421);
+            this.chart1.Size = new System.Drawing.Size(462, 362);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.chart2);
+            this.groupBox4.Controls.Add(this.button3);
+            this.groupBox4.Location = new System.Drawing.Point(12, 448);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(839, 459);
+            this.groupBox4.TabIndex = 17;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Tworzenie funkcji w punktach";
+            // 
+            // chart2
+            // 
+            chartArea2.BackColor = System.Drawing.Color.Khaki;
+            chartArea2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            chartArea2.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            chartArea2.BorderWidth = 4;
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.BorderWidth = 3;
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
+            this.chart2.Location = new System.Drawing.Point(6, 19);
+            this.chart2.Name = "chart2";
+            series2.BorderWidth = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
+            series2.Name = "Funkcja";
+            this.chart2.Series.Add(series2);
+            this.chart2.Size = new System.Drawing.Size(827, 405);
+            this.chart2.TabIndex = 2;
+            this.chart2.Text = "chart2";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(371, 430);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Rysuj";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 516);
+            this.ClientSize = new System.Drawing.Size(863, 919);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -478,6 +546,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -524,6 +594,9 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.Button button3;
     }
 }
 

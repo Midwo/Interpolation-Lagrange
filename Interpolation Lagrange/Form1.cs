@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +21,25 @@ namespace Interpolation_Lagrange
         }
     public float x1, x2, x3;
     public float y1, y2, y3;
-    private void button1_Click(object sender, EventArgs e)
+        ArrayList listx = new ArrayList();
+        ArrayList listy = new ArrayList();
+        private void button3_Click(object sender, EventArgs e)
+        {
+            listx.Add(2);
+            listy.Add(3);
+
+         //   groupBox4.Text = listx[0].ToString();
+
+
+
+
+            chart2.Series["Funkcja"].Points.AddXY(x1, y1);
+            chart2.Series["Funkcja"].Points.AddXY(x2, y2);
+            chart2.Series["Funkcja"].Points.AddXY(x3, y3);
+            chart2.Series["Funkcja"].ChartType = SeriesChartType.Point;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             x1 = float.Parse(tx1.Text);
              x2 = float.Parse(tx2.Text);
@@ -68,6 +87,7 @@ namespace Interpolation_Lagrange
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             chart1.Series["Funkcja"].Points.AddXY(x1, y1);
             chart1.Series["Funkcja"].Points.AddXY(x2, y2);
             chart1.Series["Funkcja"].Points.AddXY(x3, y3);
