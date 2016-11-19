@@ -46,11 +46,11 @@ namespace Interpolation_Lagrange
             labelwzor.Text = "f(x) = "+la.Text+"(x * x) + ("+lb.Text+")x + "+lc.Text+"";
             // wzór  f(x)=ax2+bx+c  czyli a*(x1*x1)+((b)*x1) + c
             float licz1 = wyza * (x1 * x1) + ((wyzb) * x1) + wyzc;
-            float licz2 = wyza * (x1 * x1) + ((wyzb) * x1) + wyzc;
-            float licz3 = wyza * (x1 * x1) + ((wyzb) * x1) + wyzc;
-            fx1y.Text = y1.ToString();
-            fx2y.Text = y2.ToString();
-            fx3y.Text = y3.ToString();
+            float licz2 = wyza * (x2 * x2) + ((wyzb) * x2) + wyzc;
+            float licz3 = wyza * (x3 * x3) + ((wyzb) * x3) + wyzc;
+            fx1y.Text = tx1.Text;
+            fx2y.Text = tx2.Text;
+            fx3y.Text = tx3.Text;
             fx1.Text = licz1.ToString();
             fx2.Text = licz2.ToString();
             fx3.Text = licz3.ToString();

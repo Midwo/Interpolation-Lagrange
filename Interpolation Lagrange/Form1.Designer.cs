@@ -58,6 +58,12 @@
             this.fx3y = new System.Windows.Forms.Label();
             this.fx2y = new System.Windows.Forms.Label();
             this.fx1y = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -269,6 +275,12 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.fx3);
             this.groupBox2.Controls.Add(this.fx2);
             this.groupBox2.Controls.Add(this.fx1);
@@ -285,7 +297,7 @@
             // fx3
             // 
             this.fx3.AutoSize = true;
-            this.fx3.Location = new System.Drawing.Point(46, 69);
+            this.fx3.Location = new System.Drawing.Point(78, 85);
             this.fx3.Name = "fx3";
             this.fx3.Size = new System.Drawing.Size(19, 13);
             this.fx3.TabIndex = 6;
@@ -295,7 +307,7 @@
             // fx2
             // 
             this.fx2.AutoSize = true;
-            this.fx2.Location = new System.Drawing.Point(46, 45);
+            this.fx2.Location = new System.Drawing.Point(78, 61);
             this.fx2.Name = "fx2";
             this.fx2.Size = new System.Drawing.Size(19, 13);
             this.fx2.TabIndex = 5;
@@ -304,7 +316,7 @@
             // fx1
             // 
             this.fx1.AutoSize = true;
-            this.fx1.Location = new System.Drawing.Point(46, 20);
+            this.fx1.Location = new System.Drawing.Point(78, 36);
             this.fx1.Name = "fx1";
             this.fx1.Size = new System.Drawing.Size(19, 13);
             this.fx1.TabIndex = 4;
@@ -313,29 +325,83 @@
             // fx3y
             // 
             this.fx3y.AutoSize = true;
-            this.fx3y.Location = new System.Drawing.Point(7, 69);
+            this.fx3y.Location = new System.Drawing.Point(7, 85);
             this.fx3y.Name = "fx3y";
-            this.fx3y.Size = new System.Drawing.Size(36, 13);
+            this.fx3y.Size = new System.Drawing.Size(30, 13);
             this.fx3y.TabIndex = 2;
-            this.fx3y.Text = "f(x3) =";
+            this.fx3y.Text = "f(x3) ";
             // 
             // fx2y
             // 
             this.fx2y.AutoSize = true;
-            this.fx2y.Location = new System.Drawing.Point(7, 45);
+            this.fx2y.Location = new System.Drawing.Point(7, 61);
             this.fx2y.Name = "fx2y";
-            this.fx2y.Size = new System.Drawing.Size(36, 13);
+            this.fx2y.Size = new System.Drawing.Size(30, 13);
             this.fx2y.TabIndex = 1;
-            this.fx2y.Text = "f(x2) =";
+            this.fx2y.Text = "f(x2) ";
             // 
             // fx1y
             // 
             this.fx1y.AutoSize = true;
-            this.fx1y.Location = new System.Drawing.Point(7, 20);
+            this.fx1y.Location = new System.Drawing.Point(7, 36);
             this.fx1y.Name = "fx1y";
-            this.fx1y.Size = new System.Drawing.Size(36, 13);
+            this.fx1y.Size = new System.Drawing.Size(27, 13);
             this.fx1y.TabIndex = 0;
-            this.fx1y.Text = "f(x1) =";
+            this.fx1y.Text = "f(x1)";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(49, 36);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(13, 13);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "=";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(49, 61);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(13, 13);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "=";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(49, 85);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(13, 13);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "=";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(7, 16);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(21, 13);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "f(x)";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(76, 16);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(71, 13);
+            this.label16.TabIndex = 11;
+            this.label16.Text = " a(x*x)+bx + c";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(49, 16);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(13, 13);
+            this.label17.TabIndex = 12;
+            this.label17.Text = "=";
             // 
             // Form1
             // 
@@ -401,6 +467,12 @@
         private System.Windows.Forms.Label fx3y;
         private System.Windows.Forms.Label fx2y;
         private System.Windows.Forms.Label fx1y;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
     }
 }
 
