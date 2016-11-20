@@ -19,25 +19,62 @@ namespace Interpolation_Lagrange
             InitializeComponent();
           
         }
-    public float x1, x2, x3;
-    public float y1, y2, y3;
+        public float x1, x2, x3;
+        public float y1, y2, y3;
+        public float wyza;
+        public float wyzb;
+        public float wyzc;
         ArrayList listx = new ArrayList();
         ArrayList listy = new ArrayList();
         private void button3_Click(object sender, EventArgs e)
         {
-            listx.Add(2);
-            listy.Add(3);
+            // listx.Add(2);
+            // listy.Add(3);
+            float poziomszczegółów = float.Parse(textBox1.Text);
+            //   groupBox4.Text = listx[0].ToString();
+            float x1n = x1;
+            float x3n = x3;
 
-         //   groupBox4.Text = listx[0].ToString();
+            if (x1n > x3n)
+            {
 
+            }
+            if (x1n < x3n)
+            {
 
+                for (float i = x1n; i <= x3n; i = i + poziomszczegółów)
+                {
+                    listx.Add(i);
+                    listy.Add(wyza * (i * i) + ((wyzb) * i) + wyzc);
+                }
+             
+                 
+                chart2.Series["Funkcja"].ChartType = SeriesChartType.Point;
+               int ilosc = listx.Count;
+                for (int i = 0 ; i <= ilosc-1; i++)
+                {
+                    chart2.Series["Funkcja"].Points.AddXY(listx[i], listy[i]);
+                }
+                //for (int i = 0; i == listx.Count; i++)
+                //{
+                //    chart2.Series["Funkcja"].Points.AddXY(listx[i], listy[i]);
+                //    groupBox4.Text = listx[4].ToString();
+                //}
+                //do
+                //{
+                //    chart2.Series["Funkcja"].Points.AddXY(listx[hmm], listy[hmm]);
+                //    hmm += 1;
+                //} while (hmm == ilosc);
 
+            }
 
-            chart2.Series["Funkcja"].Points.AddXY(x1, y1);
-            chart2.Series["Funkcja"].Points.AddXY(x2, y2);
-            chart2.Series["Funkcja"].Points.AddXY(x3, y3);
-            chart2.Series["Funkcja"].ChartType = SeriesChartType.Point;
-        }
+            //chart2.Series["Funkcja"].Points.AddXY(x1, y1);
+            //chart2.Series["Funkcja"].Points.AddXY(x2, y2);
+            //chart2.Series["Funkcja"].Points.AddXY(x3, y3);
+            //chart2.Series["Funkcja"].ChartType = SeriesChartType.Point;
+            }
+        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -48,16 +85,16 @@ namespace Interpolation_Lagrange
              y2 = float.Parse(ty2.Text);
              y3 = float.Parse(ty3.Text);
 
-           float wyza = ((y1 / ((x1-x2)*(x1-x3))) + 
+            wyza = ((y1 / ((x1-x2)*(x1-x3))) + 
                 (y2 / ((x2 - x1) * (x2 - x3))) 
                 + (y3 / ((x3 - x1) * (x3 - x2))));
 
-            float wyzb = (
+             wyzb = (
                 ((y1 * (x2 + x3)) / ((x1 - x2) * (x1 - x3))) -
                 ((y2 * (x1 + x3)) / ((x2 - x1) * (x2 - x3))) +
                  ((y3 * (x1 + x2)) / ((x3 - x1) * (x3 - x2))));
 
-            float wyzc = (
+             wyzc = (
                 ((y1 * x2 * x3) / ((x1 - x2) * (x1 - x3))) +
                 ((y2 * x1 * x3) / ((x2 - x1) * (x2 - x3))) +
                ((y3 * x1 * x2) / ((x3 - x1) * (x3 - x2)))
