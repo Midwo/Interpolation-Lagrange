@@ -38,6 +38,19 @@ namespace Interpolation_Lagrange
             if (x1n > x3n)
             {
 
+                for (float i = x3n; i <= x1n; i = i + poziomszczegółów)
+                {
+                    listx.Add(i);
+                    listy.Add(wyza * (i * i) + ((wyzb) * i) + wyzc);
+                }
+
+
+                chart2.Series["Funkcja"].ChartType = SeriesChartType.Point;
+                int ilosc = listx.Count;
+                for (int i = 0; i < ilosc; i++)
+                {
+                    chart2.Series["Funkcja"].Points.AddXY(listx[i], listy[i]);
+                }
             }
             if (x1n < x3n)
             {
