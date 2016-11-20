@@ -83,6 +83,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="2016-11-20 at 32-04.png" />
+    <Content Include="2016-11-20 at 32-16.png" />
+    <Content Include="2016-11-20 at 32-31.png" />
     <Content Include="favicon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
